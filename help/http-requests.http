@@ -1,0 +1,16 @@
+### /minio
+GET http://localhost:45256/minio
+
+### /minio/upload
+POST http://localhost:45256/minio/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="credentials.json"
+Content-Type: multipart/form-data
+
+< ../src/test/resources/credentials.json
+--WebAppBoundary--
+
+### /minio/getUrl
+GET http://localhost:45256/minio/getUrl?objectName=credentials.json

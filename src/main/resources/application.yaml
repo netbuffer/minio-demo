@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: minio-demo
+
+server:
+  port: 45256
+
+logging:
+  web: info
+  level:
+    root: info
+    cn.netbuffer: debug
